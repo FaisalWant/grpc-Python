@@ -1,0 +1,40 @@
+Thread Synchronization Object:
+
+1.Timeout Parameters: condition and Event objects, Lock and Rlock
+
+
+Condition Object:
+ A condition object c Wraps a Lock or RLock object L. The class  Condition exposes the following constructor and method
+
+   -- condition
+
+   -- acquire, release
+   -- notify, notify_all
+   -- wait
+
+
+Event Objects
+let any number of threads suspend and wait. All threads waiting on Event object e become ready when any other thread calls e.set() .e has a flag that records whether the event happened. It is initially FALSE when e is created.
+  -- Event
+
+  -- Clear
+
+  -- is_set    
+
+  --set 
+
+  --wait
+
+
+Semaphore objects:
+
+
+ Timer objects A Timer object calls a specified callable, in a newly made thread, after a given delay.
+The class Timer exposes the following constructor and methods:
+
+
+Barrier objects:A Barrier is a synchronization primitive allowing a certain number of threads to
+wait until they’ve all reached a certain point in their execution, before all of them
+resume. Specifically, when a thread calls b.wait(), it blocks until the specified num‐
+ber of threads have done the same call on b; at that time, all the threads blocked on b
+are released
